@@ -3,33 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="public/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Portfolio</title>
   </head>
   <body>
     <header class="header">
-      <nav class="nav-container">
-        <a class="nav-logo" href="index.html">Portfolio</a>
+      <nav class="nav-container" id="nav-container">
+        <a class="nav-logo" id="nav-logo" href="index.html">Portfolio</a>
         <div class="nav-menu">
           <ul class="nav-list">
             <li class="nav-item">
+              <i class="fa-regular fa-star"></i>
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
+              <i class="fa-regular fa-user"></i>
               <a class="nav-link" href="public/pages/about.html">About</a>
             </li>
             <li class="nav-item">
+              <i class="fa-regular fa-rectangle-list"></i>
               <a class="nav-link" href="public/pages/skills.html">Skills</a>
             </li>
             <li class="nav-item">
+              <i class="fa-solid fa-list-check"></i>
               <a class="nav-link" href="public/pages/projects.html">Projects</a>
             </li>
             <li class="nav-item">
+              <i class="fa-regular fa-address-card"></i>
               <a class="nav-link" href="public/pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-icon" id="nav-menu-open">
+              <a href="#" class="nav-link icon" onclick="mobile_menu_open()">
+                <i class="fa fa-bars"></i>
+              </a>
             </li>
           </ul>
         </div>
+        <a
+          class="nav-close"
+          id="nav-close"
+          href="#"
+          onclick="mobile_menu_close()"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></a>
       </nav>
     </header>
+
+    <script src="script.js"></script>
   </body>
 </html>

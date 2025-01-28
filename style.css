@@ -8,19 +8,20 @@
 
 body {
   background-color: white;
-  font-family: "Nunito", serif;
+  font-family: 'Nunito', serif;
   font-size: medium;
 }
 
 .header {
+  /* background-color: blue; */
   height: 4rem;
   width: 100%;
   display: block;
-  align-items: center;
+  align-content: center;
 }
 
 .nav-container {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   align-items: center;
   column-gap: 1rem;
@@ -30,7 +31,12 @@ body {
   margin-right: auto;
 }
 
+.nav-menu {
+  padding-inline: 1rem;
+}
+
 .nav-logo {
+  padding-inline: 1rem;
   text-decoration: none;
   color: black;
 }
@@ -42,9 +48,103 @@ body {
 }
 
 .nav-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item i {
+  display: none;
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
 }
+
+.nav-icon {
+  display: none;
+}
+
+.nav-close {
+  display: none;
+  color: black;
+}
+
+/* Hide and show elements classes */
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+/* ------ */
+
+/* Hides menu links and displays hamburger menu if screen is less than 600px */
+
+@media screen and (min-width: 601px) {
+  .nav-container {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+  }
+
+  .nav-item {
+    display: flex;
+  }
+
+  .nav-item i {
+    display: none;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .nav-item i {
+    display: none;
+  }
+
+  .nav-icon {
+    display: flex;
+  }
+}
+
+
+/* @media screen and (max-width: 600px) {
+  .nav-container {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .nav-item i {
+    display: block;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+} */
+
+/* @media screen and (min-width: 601px) {
+  .nav-item {
+    display: flex;
+  }
+} */
